@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<form method="post" asp-action="CreateCustomer">
+    <label for="FirstName">Please enter the first name:</label>
+    <input type="text" name="FirstName" required /><br />
+
+    <label for="LastName">Please enter the last name:</label>
+    <input type="text" name="LastName" required /><br />
+
+    <label for="Email">Please enter the email:</label>
+    <input type="text" name="Email" required /><br />
+
+    <label for="Password">Please enter the password desired:</label>
+    <input type="password" name="Password" required /><br />
+
+    <label for="HomeStore">Please enter the home store:</label>
+    <select name="HomeStore" id="HomeStore" required>
+        <option value="Grand Rapids">Grand Rapids</option>
+        <option value="Hudsonville">Hudsonville</option>
+        <option value="Rockford">Rockford</option>
+        <option value="Wyoming">Wyoming</option>
+        <option value="Lowell">Lowell</option>
+        <option value="Muskegon">Muskegon</option>
+    </select><br />
+
+    <p>Do they get a senior discount?</p>
+    <label for="SeniorDiscount">Yes</label>
+    <input type="radio" name="SeniorDiscount" value="1" id="true" /><br />
+
+    <label for="SeniorDiscount">No</label>
+    <input type="radio" name="SeniorDiscount" value="0" id="false" /><br />
+
+    <input type="submit" />
+
+</form>
